@@ -8,9 +8,11 @@
   justify-content: center;
   align-items: center;
 }
+
 .form-field {
   width: 400px;
 }
+
 .divider {
   margin-bottom: 2rem;
 }

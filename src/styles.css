@@ -41,3 +41,13 @@ body {
 .buttons-in-row button {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .invisible-in-mobile {
+    display: none !important;
+  }
+
+  .grid {
+    width: 100%;
+  }
+}
