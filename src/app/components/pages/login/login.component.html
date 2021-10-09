@@ -1,16 +1,41 @@
 <div class="container">
-  <mat-card>
+  <mat-card class="border-card" *ngIf="showEmail">
     <h1>Acesse sua conta</h1>
     <div class="divider"></div>
     <form>
-      <mat-form-field class="form-field" appearance="fill">
-        <mat-label>Email</mat-label>
-        <input matInput [(ngModel)]="user.email" name="user.email" />
-      </mat-form-field>
+      <p>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="user.email" name="user.email" />
+          <mat-hint>email@yourdomain.com</mat-hint>
+        </mat-form-field>
+      </p>
       <br />
-      <button mat-raised-button color="accent" (click)="testEmail()">
-        Acessar
-      </button>
+      <div class="buttons-in-row">
+        <button mat-raised-button color="accent" (click)="testEmail()">
+          Acessar
+        </button>
+      </div>
+    </form>
+  </mat-card>
+  <mat-card class="border-card" *ngIf="showPassWd">
+    <h1>Olá Usuário</h1>
+    <h3>Informe sua senha</h3>
+    <div class="divider"></div>
+    <form>
+      <p>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Senha</mat-label>
+          <input matInput [(ngModel)]="user.passwd" name="user.passwd" />
+          <mat-hint>*********</mat-hint>
+        </mat-form-field>
+      </p>
+      <br />
+      <div class="buttons-in-row">
+        <button mat-raised-button color="accent" (click)="testPasswd()">
+          Acessar
+        </button>
+      </div>
     </form>
   </mat-card>
 </div>

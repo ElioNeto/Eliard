@@ -1,9 +1,5 @@
-h1 {
-  color: #333;
-}
-
 .container {
-  background: #424242;
+  background: rgb(12, 12, 12);
   height: 100vh;
   padding: 0;
   margin: 0;
@@ -14,18 +10,7 @@ h1 {
 }
 .form-field {
   width: 400px;
-  background: #69f0ae;
-  color: #333;
 }
 .divider {
-  margin-bottom: 4rem;
-}
-
-mat-card {
-  background: #69f0ae;
-  opacity: 0.7;
-  padding: 2rem;
-}
-mat-label {
-  color: #333;
+  margin-bottom: 2rem;
 }
