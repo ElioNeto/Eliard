@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   showEmail: boolean = true;
   showPassWd: boolean = false;
 
-  constructor(private route:Router) {}
+  constructor(private route: Router) {}
 
   ngOnInit(): void {}
   testEmail(): void {
@@ -39,9 +39,12 @@ export class LoginComponent implements OnInit {
       console.log('ok');
       this.showEmail = false;
       this.showPassWd = true;
-this.route.navigate(['/'])
+      this.route.navigate(['']);
     } else {
       console.log('fail');
     }
+  }
+  goToSignup() {
+    this.route.navigate(['signup']);
   }
 }
