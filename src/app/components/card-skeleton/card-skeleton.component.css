@@ -1,0 +1,28 @@
+.skeleton {
+  background-color: rgba(148, 148, 148, 0.4);
+  color: rgba(148, 148, 148, 0.4);
+  border-radius: 20px;
+}
+
+.skeleton-div {
+  display: block;
+  height: 300px;
+  width: 100% !important;
+  background-color: rgba(148, 148, 148, 0.4);
+  border-radius: 20px;
+  margin-bottom: 30px !important;
+}
+
+.skeleton-title {
+  display: block;
+  width: 185px !important;
+  background-color: rgba(148, 148, 148, 0.4);
+  border-radius: 20px;
+}
+
+.skeleton-subtitle {
+  display: block;
+  width: 125px !important;
+  background-color: rgba(148, 148, 148, 0.4);
+  border-radius: 20px;
+}

@@ -1,9 +1,18 @@
 <app-navbar></app-navbar>
 <div style="padding-top: 80px">
-  <div class="grid">
-    <app-posts></app-posts>
+  <div *ngIf="postsState === 'created'; else loading" class="grid">
+    <app-posts style="width: 100%"></app-posts>
   </div>
-  <div style="position: fixed" class="grid invisible-in-mobile">
+  <ng-template #loading>
+    <div class="grid">
+      <app-card-skeleton style="width: 100%"></app-card-skeleton>
+    </div>
+  </ng-template>
+  <div
+    [@rightToLeft]="state"
+    style="position: fixed"
+    class="grid invisible-in-mobile"
+  >
     <app-user-card></app-user-card>
   </div>
 </div>
