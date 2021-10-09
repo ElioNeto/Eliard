@@ -15,8 +15,21 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
 
+import { HomeComponent } from './components/pages/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { UserCardComponent } from './components/user-card/user-card.component';
+
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignupComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+    HomeComponent,
+    NavbarComponent,
+    PostsComponent,
+    UserCardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +42,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatFormFieldModule,
     MatDividerModule,
     FormsModule,
+    MatCardModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
