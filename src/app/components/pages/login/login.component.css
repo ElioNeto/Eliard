@@ -1,0 +1,31 @@
+h1 {
+  color: #333;
+}
+
+.container {
+  background: #424242;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.form-field {
+  width: 400px;
+  background: #69f0ae;
+  color: #333;
+}
+.divider {
+  margin-bottom: 4rem;
+}
+
+mat-card {
+  background: #69f0ae;
+  opacity: 0.7;
+  padding: 2rem;
+}
+mat-label {
+  color: #333;
+}

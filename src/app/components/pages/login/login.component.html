@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-card>
+    <h1>Acesse sua conta</h1>
+    <div class="divider"></div>
+    <form>
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="user.email" name="user.email" />
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="accent" (click)="testEmail()">
+        Acessar
+      </button>
+    </form>
+  </mat-card>
+</div>
