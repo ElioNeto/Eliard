@@ -50,3 +50,12 @@ body {
 .m1 {
   margin: 0.5rem;
 }
+@media (max-width: 768px) {
+  .invisible-in-mobile {
+    display: none !important;
+  }
+
+  .grid {
+    width: 100%;
+  }
+}
