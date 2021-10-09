@@ -1,0 +1,35 @@
+<mat-card
+  *ngFor="let card of cards"
+  class="border-card"
+  style="margin: 0 auto 40px auto; width: 80%"
+>
+  <mat-card-header>
+    <div mat-card-avatar [@skeleton]="card.state" class="skeleton"></div>
+    <mat-card-title
+      [@skeleton]="card.state"
+      class="skeleton-title"
+      style="width: 100%"
+    >
+      &nbsp;
+    </mat-card-title>
+    <mat-card-subtitle [@skeleton]="card.state" class="skeleton-subtitle"
+      >&nbsp;</mat-card-subtitle
+    >
+  </mat-card-header>
+  <div [@skeleton]="card.state" class="card-content-image skeleton-div"></div>
+  <mat-card-content>
+    <div [@skeleton]="card.state" class="skeleton" style="margin-bottom: 5px">
+      &nbsp;
+    </div>
+    <div
+      [@skeleton]="card.state"
+      class="skeleton"
+      style="margin-bottom: 5px; width: 92%"
+    >
+      &nbsp;
+    </div>
+    <div [@skeleton]="card.state" class="skeleton" style="width: 70%">
+      &nbsp;
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -21,6 +21,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
+import { CardSkeletonComponent } from './components/card-skeleton/card-skeleton.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { UserCardComponent } from './components/user-card/user-card.component';
     NavbarComponent,
     PostsComponent,
     UserCardComponent,
+    CardSkeletonComponent,
   ],
   imports: [
     BrowserModule,
