@@ -42,12 +42,16 @@ export class LoginComponent implements OnInit {
 
     if (this.user.passwd === this.validUser.passwd) {
       console.log('ok');
-
-      this.showEmail = false;
-      this.showPassWd = true;
-      this.route.navigate(['/']);
+      this.route.navigate(['']);
     } else {
       console.log('fail');
     }
+  }
+  goToSignup() {
+    this.route.navigate(['signup']);
+  }
+  goToLoginStep() {
+    this.showEmail = true;
+    this.showPassWd = false;
   }
 }
