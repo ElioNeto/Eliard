@@ -3,6 +3,20 @@
   <span class="example-spacer"></span>
   <button
     mat-icon-button
+    class="example-icon favorite-icon invisible-in-desktop"
+    [matMenuTriggerFor]="addMenu"
+    aria-label="Example icon-button with account_circle icon"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+  <mat-menu style="z-index: 10001 !important" #addMenu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>add</mat-icon>
+      <span>Criar postagem</span>
+    </button>
+  </mat-menu>
+  <button
+    mat-icon-button
     [matMenuTriggerFor]="beforeMenu"
     class="example-icon favorite-icon"
     aria-label="Example icon-button with account_circle icon"
@@ -26,6 +40,11 @@
     <button routerLink="/account/settings" mat-menu-item>
       <mat-icon>settings</mat-icon>
       <span>Configurações</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button routerLink="/login" mat-menu-item>
+      <mat-icon style="color: #f44336">logout</mat-icon>
+      <span style="color: #f44336">Sair</span>
     </button>
   </mat-menu>
 </mat-toolbar>
