@@ -45,9 +45,11 @@ body {
 .text-center {
   text-align: center;
 }
+
 .p1 {
   padding: 0.5rem;
 }
+
 .m1 {
   margin: 0.5rem;
 }
@@ -59,5 +61,11 @@ body {
 
   .grid {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .invisible-in-desktop {
+    display: none !important;
   }
 }

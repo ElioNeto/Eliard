@@ -18,18 +18,22 @@ export class SignupComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
   validName(): boolean {
     if (!this.person.name || this.person.name === '') {
       console.log('nome não informado');
       return false;
     }
+
     return true;
   }
+
   validNickname(): boolean {
     if (!this.person.nickname || this.person.nickname === '') {
       console.log('nickname não informado');
       return false;
     }
+
     return true;
   }
 
@@ -38,18 +42,23 @@ export class SignupComponent implements OnInit {
       console.log('passwd não informado');
       return false;
     }
+
     return true;
   }
+
   validEmail() {
     if (!this.person.email || this.person.email === '') {
       console.log('email não informado');
       return false;
     }
+
     return true;
   }
+
   goBack(): void {
     this.router.navigate(['login']);
   }
+
   create(): void {
     if (!this.validName()) return;
     if (!this.validNickname()) return;
@@ -58,6 +67,7 @@ export class SignupComponent implements OnInit {
 
     console.log('sucesso!');
     console.log(this.person);
+
     this.router.navigate(['']);
   }
 }
