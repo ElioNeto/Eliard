@@ -1,5 +1,10 @@
 <div class="container">
-  <mat-card class="border-card" *ngIf="showEmail">
+  <mat-card
+    style="width: 80%"
+    [@centerToLeft]="emailState"
+    class="border-card"
+    *ngIf="showEmail"
+  >
     <mat-card-title>Acesse sua conta</mat-card-title>
     <div class="divider"></div>
     <form>
@@ -24,7 +29,12 @@
       </div>
     </form>
   </mat-card>
-  <mat-card class="border-card" *ngIf="showPassWd">
+  <mat-card
+    style="width: 80%"
+    [@rightToCenter]="passwdState"
+    class="border-card"
+    *ngIf="showPassWd"
+  >
     <mat-card-title>Olá Usuário</mat-card-title>
     <mat-card-subtitle>Informe sua senha</mat-card-subtitle>
     <div class="divider"></div>
@@ -45,7 +55,7 @@
       <p class="text-center p1">ou</p>
       <div class="buttons-in-row">
         <button mat-stroked-button color="accent" (click)="goToLoginStep()">
-          Criar nova conta
+          Voltar
         </button>
       </div>
     </form>
