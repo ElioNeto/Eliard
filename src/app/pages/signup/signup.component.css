@@ -1,0 +1,16 @@
+.container {
+  background: rgb(12, 12, 12);
+
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.form-field {
+  width: 400px;
+}
+.divider {
+  margin-bottom: 2rem;
+}

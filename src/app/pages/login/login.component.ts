@@ -45,9 +45,12 @@ export class LoginComponent implements OnInit {
 
       this.showEmail = false;
       this.showPassWd = true;
-      this.route.navigate(['/']);
+      this.route.navigate(['']);
     } else {
       console.log('fail');
     }
+  }
+  goToSignup() {
+    this.route.navigate(['signup']);
   }
 }
