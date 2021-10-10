@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
     passwd: 'passwd',
   };
 
-  public showEmail: boolean = true;
-  public showPassWd: boolean = false;
+  public showEmail: boolean = false;
+  public showPassWd: boolean = true;
 
   constructor(private route: Router) {}
 
