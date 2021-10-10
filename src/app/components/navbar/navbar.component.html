@@ -1,18 +1,31 @@
-<mat-toolbar color="accent" style="position: fixed; z-index: 10000">
-  <span>Eliard</span>
+<mat-toolbar color="accent" style="position: fixed; z-index: 1000">
+  <span routerLink="/" style="cursor: pointer">Eliard</span>
   <span class="example-spacer"></span>
   <button
     mat-icon-button
+    [matMenuTriggerFor]="beforeMenu"
     class="example-icon favorite-icon"
     aria-label="Example icon-button with account_circle icon"
   >
     <mat-icon>account_circle</mat-icon>
   </button>
-  <button
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with settings icon"
+  <mat-menu
+    style="z-index: 10001 !important"
+    #beforeMenu="matMenu"
+    xPosition="before"
   >
-    <mat-icon>settings</mat-icon>
-  </button>
+    <button routerLink="/profile" mat-menu-item>
+      <mat-icon>account_circle</mat-icon>
+      <span>Seu perfil</span>
+    </button>
+    <button routerLink="/account/edit" mat-menu-item>
+      <mat-icon>edit</mat-icon>
+      <span>Editar conta</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button routerLink="/account/settings" mat-menu-item>
+      <mat-icon>settings</mat-icon>
+      <span>Configurações</span>
+    </button>
+  </mat-menu>
 </mat-toolbar>

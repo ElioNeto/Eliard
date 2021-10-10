@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,6 +49,7 @@ import { CardSkeletonComponent } from './components/card-skeleton/card-skeleton.
     FormsModule,
     MatCardModule,
     MatDividerModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
