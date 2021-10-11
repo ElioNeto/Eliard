@@ -1,3 +1,10 @@
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PersonModel } from 'src/app/models/personModel';
@@ -6,8 +13,24 @@ import { PersonModel } from 'src/app/models/personModel';
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
+  animations: [
+    trigger('anim', [
+      state('created', style({ opacity: 1, transform: 'translate(0, 0)' })),
+      transition('void => created', [
+        style({ opacity: 0, transform: 'translate(0, +100px)' }),
+        animate('500ms ease-in-out'),
+      ]),
+      state('up', style({ opacity: 0, transform: 'translate(0, +100px)' })),
+      transition('created => up', [
+        style({ opacity: 1, transform: 'translate(0, 0)' }),
+        animate('500ms ease-in-out'),
+      ]),
+    ]),
+  ],
 })
 export class SignupComponent implements OnInit {
+  public state: string = 'created';
+
   person: PersonModel = {
     name: '',
     nickname: '',
@@ -56,7 +79,11 @@ export class SignupComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['login']);
+    this.state = 'up';
+
+    setTimeout(() => {
+      this.router.navigate(['/login']);
+    }, 500);
   }
 
   create(): void {
@@ -68,6 +95,6 @@ export class SignupComponent implements OnInit {
     console.log('sucesso!');
     console.log(this.person);
 
-    this.router.navigate(['']);
+    this.router.navigate(['/']);
   }
 }
