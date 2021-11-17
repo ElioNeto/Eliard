@@ -15,14 +15,18 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { LoginComponent } from './pages/login/login.component';
-import { SignupComponent } from './pages/signup/signup.component';
-import { HomeComponent } from './pages/home/home.component';
-
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { PostsComponent } from './components/posts/posts.component';
-import { UserCardComponent } from './components/user-card/user-card.component';
-import { CardSkeletonComponent } from './components/card-skeleton/card-skeleton.component';
+import {
+  HomeComponent,
+  LoginComponent,
+  SignupComponent,
+  ProfileComponent,
+} from './pages';
+import {
+  CardSkeletonComponent,
+  NavbarComponent,
+  PostsComponent,
+  UserCardComponent,
+} from './components';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,7 @@ import { CardSkeletonComponent } from './components/card-skeleton/card-skeleton.
     PostsComponent,
     UserCardComponent,
     CardSkeletonComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
