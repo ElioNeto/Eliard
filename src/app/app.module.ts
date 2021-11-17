@@ -27,6 +27,7 @@ import {
   PostsComponent,
   UserCardComponent,
   ProfilePhotoComponent,
+  ProfileSectionBgComponent,
 } from './components';
 
 @NgModule({
@@ -41,6 +42,7 @@ import {
     CardSkeletonComponent,
     ProfileComponent,
     ProfilePhotoComponent,
+    ProfileSectionBgComponent,
   ],
   imports: [
     BrowserModule,
