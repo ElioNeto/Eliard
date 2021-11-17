@@ -30,6 +30,8 @@ import {
   ProfileSectionBgComponent,
 } from './components';
 
+import { TypoModule } from './modules';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +61,7 @@ import {
     MatCardModule,
     MatDividerModule,
     MatMenuModule,
+    TypoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
